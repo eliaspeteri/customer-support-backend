@@ -1,6 +1,6 @@
 import { Issue } from '../types';
 import IssueModel from '../models/issue';
-// import emailService from './email';
+import emailService from './email';
 
 const getAll = async (): Promise<Issue[]> => await IssueModel.find({});
 
@@ -11,7 +11,7 @@ const saveOne = async (document: any) => {
   });
   newIssue.save();
 
-  /*emailService(`<h1>Issue Summary</h1>
+  emailService(`<h1>Issue Summary</h1>
   <table>
     <tr>
       <td>Name:</td>
@@ -29,7 +29,7 @@ const saveOne = async (document: any) => {
       <td>Issue description:</td>
       <td>${document.description}</td>
     </tr>
-  </table>`);*/
+  </table>`);
 
   return {
     success: true,
