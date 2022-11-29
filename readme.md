@@ -53,6 +53,15 @@ As for the development version, it's even easier:
 npm run dev
 ```
 
+For double checking that the server works, the console should read:
+
+```none
+Connected successfully, url: "http://localhost:8080" (or a custom one if set)
+Connected successfully to MongoDB.
+```
+
+Furthermore, if you navigate to \<url>:\<port>/api/issues, you should either see a blank page or some data if any were already entered.
+
 ## Uninstallation
 
 Simply delete the project folder from your computer.
